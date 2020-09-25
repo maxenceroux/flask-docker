@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{name}}  !
+</h1>
+<h2 class="subtitle">
+  Login to Spotify to see your stats!
+</h2>
+<form method="POST" action="/login_spotify">
+  </div>
+  <button class="button is-block is-info is-large is-fullwidth">Login to Spotify</button>
+</form>
+<h2 class="subtitle"> 
+  Your display name is {{display_name}}
+</h2>
+{% endblock %}

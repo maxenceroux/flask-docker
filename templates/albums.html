@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block content %}
+<nav class="product-filter">
+  <h1>Jackets</h1>
+
+  <div class="sort">
+    <div class="collection-sort">
+      <label>Filter by:</label>
+      <select>
+        <option value="/">All Jackets</option>
+      </select>
+    </div>
+
+    <div class="collection-sort">
+      <label>Sort by:</label>
+      <select>
+        <option value="/">Featured</option>
+      </select>
+    </div>
+  </div>
+</nav>
+<h1 class="title">
+  Your saved albums</h1>
+<section id="parent">
+  <div id="menu">
+    <a>hi</a>
+    <a>ho</a>
+    <a>hi</a>
+  </div>
+  <div id="albums_collection">
+    {%for i in range(0, 20)%}
+    <div id="album" >
+      <img id="album_image" class="slider" src="{{images[i]}}" />
+      <div id="album_info">
+        <div id="album_name">
+          {{album_names[i]}}
+        </div>
+        <div id="artist">
+          {{artists[i]}}
+          {{images[i]}}
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+
+  {% endblock %}
+</section>
